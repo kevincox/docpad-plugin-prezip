@@ -1,35 +1,36 @@
 {
-	"name": "docpad-plugin-prezip",
-	"version": "2.0.0",
-	"description": "Docpad plugin to precompress files.",
-	"homepage": "https://github.com/kevincox/docpad-plugin-prezip",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"gzip"
-	],
-	"author": "Kevin Cox <kevincox@kevincox.ca>",
-	"maintainers": [
-		"Kevin Cox <kevincox@kevincox.ca>"
-	],
-	"contributors": [
-		"Kevin Cox <kevincox@kevincox.ca>"
-	],
-	"bugs": {
-		"url": "https://github.com/kevincox/docpad-plugin-kevincox/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/kevincox/docpad-plugin-kevincox.git"
-	},
-	"engines": {
-		"node": ">=0.8"
-	},
-	"dependencies": {
-		"async": "^0.7.0"
-	},
-	"peerDependencies": {
-		"docpad": "6"
-	},
-	"main": "./prezip.plugin.js"
+  "name": "docpad-plugin-prezip",
+  "version": "2.1.0",
+  "description": "Docpad plugin to precompress files.",
+  "homepage": "https://github.com/kevincox/docpad-plugin-prezip",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "gzip"
+  ],
+  "author": "Kevin Cox <kevincox@kevincox.ca>",
+  "maintainers": [
+    "Kevin Cox <kevincox@kevincox.ca>"
+  ],
+  "contributors": [
+    "Kevin Cox <kevincox@kevincox.ca>"
+  ],
+  "bugs": {
+    "url": "https://github.com/kevincox/docpad-plugin-kevincox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevincox/docpad-plugin-kevincox.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {
+    "async": "^0.7.0",
+    "walk": "^2.3.1"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  },
+  "main": "./prezip.plugin.js"
 }
