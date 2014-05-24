@@ -26,7 +26,7 @@ module.exports = function(BasePlugin) {
 			if (!Array.isArray(c.whitelist)) c.whitelist = c.whitelist ? [c.whitelist] : [];
 			if (!Array.isArray(c.blacklist)) c.blacklist = c.blacklist ? [c.blacklist] : [];
 			
-			var root = docpad.config.outPath;
+			var root = this.docpad.config.outPath;
 			var w = walk.walk(root, {followLinks: false});
 			w.on("file", function(prefix, file, next) {
 				var rel = prefix.slice(root.length)+"/"+file.name;
@@ -113,16 +113,16 @@ function generateCompressed(self, path, data, next) {
 	
 	zlib.gzip(data, cfg.gzip, function(err, r){
 		if (err) {
-			docpad.log("error", "Error: prezip: ", err);
+			self.docpad.log("error", "Error: prezip: ", err);
 			return next(err);
 		}
 		
 		var ratio = r.length/data.length;
 		
-		docpad.log("debug", "Prezipped "+path+" with compression ratio of "+ratio+".");
+		self.docpad.log("debug", "Prezipped "+path+" with compression ratio of "+ratio+".");
 		
 		if (ratio > self.config.ratio) {
-			docpad.log("info", "Not storing "+path +".gz with ratio "+ratio+".");
+			self.docpad.log("info", "Not storing "+path +".gz with ratio "+ratio+".");
 			return next();
 		}
 		
