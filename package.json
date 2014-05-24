@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-prezip",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Docpad plugin to precompress files.",
   "homepage": "https://github.com/kevincox/docpad-plugin-prezip",
   "keywords": [
